@@ -17,6 +17,8 @@ import Header from './components/Layout/Header.vue'
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Satoshi', sans-serif;
   // font-family: 'Overused Grotesk', sans-serif;
 }

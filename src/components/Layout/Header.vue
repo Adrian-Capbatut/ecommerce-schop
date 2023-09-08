@@ -27,12 +27,17 @@
     background: #fff;
 
     &-top {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 70px;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 28px;
 
         &-right {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
 
             &__cart {
                 margin-right: 16px;
@@ -44,6 +49,7 @@
         color: #22202e;
         font-size: 24px;
         text-decoration: none;
+        text-align: center;
         font-family: "Overused Grotesk", sans-serif;
 
         &:hover {
