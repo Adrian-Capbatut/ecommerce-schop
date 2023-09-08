@@ -26,6 +26,10 @@ body {
   // font-family: 'Overused Grotesk', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1440px;
   margin: auto;
