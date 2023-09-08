@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="header">
         <div class="header-top">
             <div class="header-top-search">
                 <img src="/svg/header-search.svg" alt="search" />
@@ -18,8 +18,44 @@
                 </div>
             </div>
         </div>
+        <div class="header-menu">
+            <a class="header-menu__link" v-for="(element, i) of menu" :key="i" :href="element.path">{{ element.name }}</a>
+        </div>
     </header>
 </template>
+
+<script setup>
+const menu = [
+    {
+        name: "Plant pots",
+        path: "/plant",
+    },
+    {
+        name: "Ceramics",
+        path: "/ceramics",
+    },
+    {
+        name: "Tables",
+        path: "/tables",
+    },
+    {
+        name: "Chairs",
+        path: "/chairs",
+    },
+    {
+        name: "Crockery",
+        path: "/crockery",
+    },
+    {
+        name: "Tableware",
+        path: "/tableware",
+    },
+    {
+        name: "Cutlery",
+        path: "/cutlery",
+    },
+];
+</script>
 
 <style lang="scss" scoped>
 .header {
@@ -54,6 +90,23 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    &-menu {
+        height: 62px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__link {
+            margin: 0 22px;
+            color: #726E8D;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
